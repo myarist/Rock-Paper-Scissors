@@ -74,7 +74,7 @@ def main():
     
     st.sidebar.header('Please Enter Image Link')
         
-    image_url = st.sidebar.text_input("Paste the image file's link here")
+    image_url = st.sidebar.text_input("Paste the image file's link here. (JPG or JPEG only)")
 
     if image_url == "":
         st.markdown("<h1 style='text-align: center;'>Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼</h1>", unsafe_allow_html=True)
