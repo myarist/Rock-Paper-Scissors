@@ -1,6 +1,5 @@
 from io import BytesIO
 from PIL import Image
-from tensorflow.keras import backend
 from urllib.request import urlopen
 
 import matplotlib.pyplot as plt
@@ -11,7 +10,6 @@ import tensorflow as tf
 
 def main():
     from tensorflow.keras.applications.inception_v3 import InceptionV3
-    backend.clear_session()
 
     pre_trained_model = InceptionV3(input_shape = (150, 150, 3), 
                                     include_top = False, 
