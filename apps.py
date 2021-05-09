@@ -1,12 +1,13 @@
-import tensorflow as tf
-from tensorflow.keras import backend
-import numpy as np
-from PIL import Image
-import streamlit as st
-import matplotlib.pyplot as plt
-import seaborn as sns
-from urllib.request import urlopen
 from io import BytesIO
+from PIL import Image
+from tensorflow.keras import backend
+from urllib.request import urlopen
+
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import streamlit as st
+import tensorflow as tf
 
 def main():
     from tensorflow.keras.applications.inception_v3 import InceptionV3
