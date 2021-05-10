@@ -1,16 +1,14 @@
-<p align="center">
-    <h1>Welcome to the Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼 Project</h1>
-</p>
+<h1 align="center">Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼</h1>
 
 <p align="center">
-    <img src="RPS.png">
+    <img src="RPS.png" >
 </p>
 
 In this project, I explore how we can use CNN and transfer learning to build an image classifier. The dataset consists of 2188 images that classified by **Rock**, **Paper**, and **Scissors**. 
 
 The full dataset can be downloaded [here](https://dicodingacademy.blob.core.windows.net/picodiploma/ml_pemula_academy/rockpaperscissors.zip).
 
----
+
 
 ## File Descriptions
 
@@ -19,7 +17,7 @@ There are only 3 important files in this repository.
 - `model_inception_weights.h5` is the trained weights of our deep learning model's layers. This is used to load the model in our web app.
 - `apps.py` is the python file to deploy our web app in Streamlit.
 
----
+
 
 ## How to Use
 
@@ -33,7 +31,7 @@ To view the project as a deployed online web app hosted by Heroku, you can check
 
 ![heroku gif](heroku.gif)
 
----
+
 
 ## Model Description
 
@@ -43,15 +41,16 @@ Read more about this model at:
 - https://keras.io/api/applications/inceptionv3/
 - https://arxiv.org/abs/1512.00567
 
----
+
 
 ## Model Evaluation
 
 We achieved 99% accuracy on training set and 97,5% accuracy on validation set.
 
-```
-Classification Report
+<details>
+<summary>Classification Report</summary>
 
+```
               precision    recall  f1-score   support
 
         Rock       1.00      0.98      0.99       285
@@ -62,5 +61,14 @@ Classification Report
    macro avg       0.99      0.99      0.99       876
 weighted avg       0.99      0.99      0.99       876
 ```
+
+</details>
+
+<details>
+<summary>Training and Validation Accuracy and Loss</summary>
+
 <img src='acc.png' align="left" height="50%" />
-<img src='loss.png' align="right" height="50%" />
+
+<img src='loss.png' align="left" height="50%" />
+
+</details>
