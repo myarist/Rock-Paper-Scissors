@@ -11,9 +11,11 @@ import tensorflow as tf
 def main():
     from tensorflow.keras.applications.inception_v3 import InceptionV3
 
-    pre_trained_model = InceptionV3(input_shape = (150, 150, 3), 
-                                    include_top = False, 
-                                    weights = 'imagenet')
+    pre_trained_model = InceptionV3(
+        input_shape = (150, 150, 3), 
+        include_top = False, 
+        weights = 'imagenet'
+    )
 
     for layer in pre_trained_model.layers:
         layer.trainable = False
@@ -33,9 +35,12 @@ def main():
 
     model_inception = tf.keras.Model(pre_trained_model.input, x) 
 
-    model_inception.compile(optimizer = 'adam', 
-              loss = 'categorical_crossentropy', 
-              metrics = ['accuracy'])
+    model_inception.compile(
+        optimizer = 'adam', 
+        loss = 'categorical_crossentropy', 
+        metrics = ['accuracy']
+    )
+    
     model_inception.load_weights('model_inception_weights.h5')
 
     def predict_image(image_upload, model = model_inception):
@@ -62,19 +67,30 @@ def main():
         predict_label = np.argmax(model.predict(im_input))
 
         if predict_label == 0:
-            predict_product = 'Paper'
+            predict_product = 'Paper ✋🏼'
         elif predict_label == 1:
-            predict_product = 'Rock'
+            predict_product = 'Rock ✊🏼'
         else:
-            predict_product = 'Scissor'
+            predict_product = 'Scissor ✌🏼'
 
         return predict_product, df, im, s
     
+    st.set_page_config(page_title='Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼', page_icon = 'rock.ico')
+    
     st.sidebar.header('Please Enter Image Link')
-        
-    image_url = st.sidebar.text_input("Paste the image file's link here. (JPG or JPEG only)")
+    st.sidebar.markdown(
+        " \
+        Example link for <a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzt3OL9DdfGODyBesGVVu8i7MNh0nINfjA6r1PDOj4g8xNnpM1rz3iNootFDzIU4ukZA&usqp=CAU' style='text-decoration: none;'>Rock</a>, \
+                         <a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68ARUGkcMCdcIAWylFRNx8-rEO3TT4uULjXZLMEiN1Jh7SrmtWNrR0bLVC5DoqJs_AsM&usqp=CAU' style='text-decoration: none;'>Paper</a>, \
+                         <a href='https://thumbs.dreamstime.com/b/young-male-scissors-gesture-left-hand-concept-rock-paper-game-isolated-white-background-118950800.jpg' style='text-decoration: none;'>Scissors</a>", \
+        unsafe_allow_html=True
+    )
+    
+    image_url = st.sidebar.text_input("Please use JPG or JPEG image for better prediction")
+    
 
     if image_url == "":
+        st.sidebar.image('https://i0.wp.com/media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif', width=300)
         st.markdown("<h1 style='text-align: center;'>Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼</h1>", unsafe_allow_html=True)
         st.markdown("""
                     """)
@@ -88,7 +104,7 @@ def main():
             label, df_output, uploaded_image, s = predict_image(img)
             st.sidebar.image(uploaded_image, width = None)
 
-            st.title("The Image is Detected as " + label)
+            st.markdown("<h1 style='text-align: center;'>The Image is Detected as {}</h1>".format(label), unsafe_allow_html=True)
             st.markdown("""
                         """)
             
@@ -100,16 +116,17 @@ def main():
             for i,p in enumerate(ax.patches):
                 height = p.get_height()
                 ax.text(p.get_x()+p.get_width()/2.,
-                    height + 0.003, str(round(s[i]*100,2))+'%',
+                    height + 0.01, str(round(s[i]*100,2))+'%',
                     ha="center") 
 
             st.pyplot(fig)
         except:
+            st.sidebar.image('emot.gif')
             st.markdown("<h1 style='text-align: center; color:red;'>Oh, No! 😱</h1>", unsafe_allow_html=True)
             st.markdown("""
                         """)
             st.image('RPS.png', width=700)
-            st.markdown("<h2 style='text-align: center;'>Please Use Other Link Image 🙏🏻</h2>", unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center;'>Please Use Another Link Image 🙏🏻</h2>", unsafe_allow_html=True)
         
 if __name__ == '__main__':
     main()
