@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    In this project, I explore how we can use CNN and transfer learning to build an image classifier. The dataset consists of 2188 images that classified by <strong>Rock<strong>, <strong>Paper<strong>, and <strong>Scissors<strong>.
+    In this project, I explore how we can use CNN and transfer learning to build an image classifier. <br>The dataset consists of 2188 images that classified by <strong>Rock<strong>, <strong>Paper<strong>, and <strong>Scissors<strong>.
 </p>
 
 <p align="center">
