@@ -16,7 +16,7 @@
 ## File Descriptions
 
 There are only 3 important files in this repository.
-- `modelling.ipynb` is a jupyter notebook which can be run on Google Colab (with GPU for faster training. It contains step-by-step on how to create the image classifier and export the model. 
+- `modeling.ipynb` is a jupyter notebook which can be run on Google Colab (with GPU for faster training. It contains step-by-step on how to create the image classifier and export the model. 
 - `model_inception_weights.h5` is the trained weights of our deep learning model's layers. This is used to load the model in our web app.
 - `apps.py` is the python file to deploy our web app in Streamlit.
 
@@ -49,6 +49,19 @@ Read more about this model at:
 ## Model Evaluation
 
 We achieved 99% accuracy on training set and 97,5% accuracy on validation set.
+
+<details>
+<summary>Confussion Matrix</summary>
+
+<br>
+
+```
+[[278   4   3]
+ [  0 291   0]
+ [  1   0 299]]
+```
+
+</details>
 
 <details>
 <summary>Classification Report</summary>
