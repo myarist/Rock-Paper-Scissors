@@ -4,10 +4,13 @@
     <img src="RPS.png" >
 </p>
 
-In this project, I explore how we can use CNN and transfer learning to build an image classifier. The dataset consists of 2188 images that classified by **Rock**, **Paper**, and **Scissors**. 
+<p align="center">
+    In this project, I explore how we can use CNN and transfer learning to build an image classifier. The dataset consists of 2188 images that classified by <strong>Rock<strong>, <strong>Paper<strong>, and <strong>Scissors<strong>.
+</p>
 
-The full dataset can be downloaded [here](https://dicodingacademy.blob.core.windows.net/picodiploma/ml_pemula_academy/rockpaperscissors.zip).
-
+<p align="center">
+   The full dataset can be downloaded <a href="https://dicodingacademy.blob.core.windows.net/picodiploma/ml_pemula_academy/rockpaperscissors.zip">here</a>
+</p>
 
 
 ## File Descriptions
@@ -50,6 +53,8 @@ We achieved 99% accuracy on training set and 97,5% accuracy on validation set.
 <details>
 <summary>Classification Report</summary>
 
+<br>
+
 ```
               precision    recall  f1-score   support
 
@@ -66,6 +71,8 @@ weighted avg       0.99      0.99      0.99       876
 
 <details>
 <summary>Training and Validation Accuracy and Loss</summary>
+
+<br>
 
 <img src='acc.png' align="left" height="50%" />
 
