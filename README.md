@@ -30,7 +30,7 @@ To run the project locally, you can download this repo and type
 streamlit run apps.py
 ```
 
-To view the project as a deployed online web app hosted by Heroku, you can check out with [this link](https://rps-myarist.herokuapp.com/)
+To view the project as a deployed online web app hosted by Heroku, you can check out with [this link](https://share.streamlit.io/myarist/rock-paper-scissors/main/apps.py)
 
 ![heroku gif](heroku.gif)
 
