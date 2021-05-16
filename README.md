@@ -12,11 +12,28 @@
    The full dataset can be downloaded <a href="https://dicodingacademy.blob.core.windows.net/picodiploma/ml_pemula_academy/rockpaperscissors.zip">here</a>
 </p>
 
+## File Structure
+
+```
+.
+├── Images
+├── Models
+│   ├── model_inception.h5
+│   ├── model_inception_weights.h5
+│   ├── model_simple.h5
+│   ├── model_simple_weights.h5
+│   └── modeling.ipynb
+├── Procfile
+├── setup.sh
+├── requirements.txt
+├── apps.py
+└── etc.
+```
 
 ## File Descriptions
 
 There are only 3 important files in this repository.
-- `modeling.ipynb` is a jupyter notebook which can be run on Google Colab (with GPU for faster training. It contains step-by-step on how to create the image classifier and export the model. 
+- `modeling.ipynb` is a jupyter notebook which can be run on Google Colab (with GPU for faster training). It contains step-by-step on how to create the image classifier and export the model. 
 - `model_inception_weights.h5` is the trained weights of our deep learning model's layers. This is used to load the model in our web app.
 - `apps.py` is the python file to deploy our web app in Streamlit.
 
@@ -56,9 +73,9 @@ We achieved 99% accuracy on training set and 97,5% accuracy on validation set.
 <br>
 
 ```
-[[278   4   3]
- [  0 291   0]
- [  1   0 299]]
+[[284   0   1]
+ [  1 290   0]
+ [  0   0 300]]
 ```
 
 </details>
@@ -71,13 +88,13 @@ We achieved 99% accuracy on training set and 97,5% accuracy on validation set.
 ```
               precision    recall  f1-score   support
 
-        Rock       1.00      0.98      0.99       285
-       Paper       0.99      1.00      0.99       291
-    Scissors       0.99      1.00      0.99       300
+        Rock       1.00      1.00      1.00       285
+       Paper       1.00      1.00      1.00       291
+    Scissors       1.00      1.00      1.00       300
 
-    accuracy                           0.99       876
-   macro avg       0.99      0.99      0.99       876
-weighted avg       0.99      0.99      0.99       876
+    accuracy                           1.00       876
+   macro avg       1.00      1.00      1.00       876
+weighted avg       1.00      1.00      1.00       876
 ```
 
 </details>
@@ -87,8 +104,6 @@ weighted avg       0.99      0.99      0.99       876
 
 <br>
 
-<img src='Images/acc.png' align="left" height="50%" />
-
-<img src='Images/loss.png' align="left" height="50%" />
+<img src='Images/history.png' align="left" height="50%" />
 
 </details>
