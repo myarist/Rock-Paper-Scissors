@@ -1,7 +1,7 @@
 <h1 align="center">Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼</h1>
 
 <p align="center">
-    <img src="RPS.png" >
+    <img src="Images/RPS.png" >
 </p>
 
 <p align="center">
@@ -32,7 +32,7 @@ streamlit run apps.py
 
 To view the project as a deployed online web app hosted by Heroku, you can check out with [this link](https://rps-myarist.herokuapp.com/)
 
-![heroku gif](heroku.gif)
+![heroku gif](Images/heroku.gif)
 
 
 
@@ -87,8 +87,8 @@ weighted avg       0.99      0.99      0.99       876
 
 <br>
 
-<img src='acc.png' align="left" height="50%" />
+<img src='Images/acc.png' align="left" height="50%" />
 
-<img src='loss.png' align="left" height="50%" />
+<img src='Images/loss.png' align="left" height="50%" />
 
 </details>

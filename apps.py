@@ -41,7 +41,7 @@ def main():
         metrics = ['accuracy']
     )
     
-    model_inception.load_weights('model_inception_weights.h5')
+    model_inception.load_weights('Models/model_inception_weights.h5')
 
     def predict_image(image_upload, model = model_inception):
         im = Image.open(image_upload)
@@ -75,7 +75,7 @@ def main():
 
         return predict_product, df, im, s
     
-    st.set_page_config(page_title='Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼', page_icon = 'rock.ico')
+    st.set_page_config(page_title='Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼', page_icon = 'Images/rock.ico')
     
     st.sidebar.header('Please Enter Image Link')
     st.sidebar.markdown(
@@ -90,11 +90,11 @@ def main():
     
 
     if image_url == "":
-        st.sidebar.image('https://i0.wp.com/media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif', width=300)
+        st.sidebar.image('https://media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif', width=300)
         st.markdown("<h1 style='text-align: center;'>Rock ✊🏼 Paper ✋🏼 Scissors ✌🏼</h1>", unsafe_allow_html=True)
         st.markdown("""
                     """)
-        st.image('RPS.png', width=700)
+        st.image('Images/RPS.png', width=700)
         st.markdown("<h3 style='text-align: center;'>Project by <a href='https://www.linkedin.com/in/myarist/' style='text-decoration: none; color:white;'>Muhammad Yusuf Aristyanto</a></h3>", unsafe_allow_html=True)
 
     else:
@@ -121,11 +121,11 @@ def main():
 
             st.pyplot(fig)
         except:
-            st.sidebar.image('emot.gif')
+            st.sidebar.image('Images/emot.gif')
             st.markdown("<h1 style='text-align: center; color:red;'>Oh, No! 😱</h1>", unsafe_allow_html=True)
             st.markdown("""
                         """)
-            st.image('RPS.png', width=700)
+            st.image('Images/RPS.png', width=700)
             st.markdown("<h2 style='text-align: center;'>Please Use Another Link Image 🙏🏻</h2>", unsafe_allow_html=True)
         
 if __name__ == '__main__':
