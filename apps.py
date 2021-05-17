@@ -51,11 +51,11 @@ def main():
         im_input = tf.reshape(im_array, shape = [1, 150, 150, 3])
 
         predict_array = model.predict(im_input)[0]
-        mac_proba = predict_array[0]
-        ipad_proba = predict_array[1]
-        iphone_proba = predict_array[2]
+        paper_proba = predict_array[0]
+        rock_proba = predict_array[1]
+        scissors_proba = predict_array[2]
 
-        s = [mac_proba, ipad_proba, iphone_proba]
+        s = [paper_proba, rock_proba, scissors_proba]
 
         import pandas as pd
         df = pd.DataFrame(predict_array)
