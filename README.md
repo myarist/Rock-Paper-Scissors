@@ -65,7 +65,7 @@ Read more about this model at:
 
 ## Model Evaluation
 
-We achieved 99,66% accuracy on training set and 99,55% accuracy on validation set.
+We achieved 99,55% accuracy on training set and 99,66% accuracy on validation set.
 
 <details>
 <summary>Confussion Matrix</summary>
