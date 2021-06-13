@@ -18,10 +18,7 @@
 .
 ├── Images
 ├── Models
-│   ├── model_inception.h5
 │   ├── model_inception_weights.h5
-│   ├── model_simple.h5
-│   ├── model_simple_weights.h5
 │   └── modeling.ipynb
 ├── Procfile
 ├── setup.sh
@@ -30,7 +27,7 @@
 └── etc.
 ```
 
-## File Descriptions
+## File Description
 
 There are only 3 important files in this repository.
 - `modeling.ipynb` is a jupyter notebook which can be run on Google Colab (with GPU for faster training). It contains step-by-step on how to create the image classifier and export the model. 
